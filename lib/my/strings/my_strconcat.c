@@ -6,7 +6,7 @@
 */
 
 #include <stdlib.h>
-#include "my.h"
+#include "../my.h"
 
 char *my_strconcat(char *str, char *str_bis)
 {

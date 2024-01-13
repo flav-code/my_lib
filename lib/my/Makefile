@@ -27,12 +27,35 @@ FOLDER_MY_PRINTF	=	./my_printf/my_printf.c \
 						./my_printf/flags/e_cap.c \
 						./my_printf/flags/g_cap.c
 
+FOLDER_STRINGS	=	./strings/my_str_isalpha.c \
+					./strings/my_str_islower.c \
+					./strings/my_str_isnum.c \
+					./strings/my_str_isprintable.c \
+					./strings/my_str_isupper.c \
+					./strings/my_str_to_word_array.c \
+					./strings/my_strcapitalize.c \
+					./strings/my_strcat.c	\
+					./strings/my_strcmp.c \
+					./strings/my_strconcat.c \
+					./strings/my_strcpy.c \
+					./strings/my_strdup.c \
+					./strings/my_strlen.c \
+					./strings/my_strlowcase.c \
+					./strings/my_strncat.c \
+					./strings/my_strncmp.c \
+					./strings/my_strncpy.c \
+					./strings/my_strstr.c \
+					./strings/my_strtok.c \
+					./strings/my_strupcase.c
+
 SRC	=	${FOLDER_MY_PRINTF} \
+		${FOLDER_STRINGS} \
 		my_compute_power_rec.c \
 		my_compute_square_root.c \
 		my_find_prime_sup.c \
 		my_getnbr.c \
 		my_isneg.c \
+		my_nbrstr.c \
 		my_is_prime.c \
 		my_print_alpha.c \
 		my_print_digits.c \
@@ -46,27 +69,6 @@ SRC	=	${FOLDER_MY_PRINTF} \
 		my_showstr.c \
 		my_show_word_array.c \
 		my_sort_int_array.c \
-		my_strcapitalize.c \
-		my_strcat.c	\
-		my_strcmp.c \
-		my_strcpy.c \
-		my_strdup.c \
-		my_str_isalpha.c \
-		my_str_islower.c \
-		my_str_isnum.c \
-		my_str_isprintable.c \
-		my_str_isupper.c \
-		my_strconcat.c \
-		my_nbrstr.c \
-		my_strlen.c \
-		my_strlowcase.c \
-		my_strncat.c \
-		my_strncmp.c \
-		my_strncpy.c \
-		my_strstr.c \
-		my_strtok.c \
-		my_str_to_word_array.c \
-		my_strupcase.c \
 		my_swap.c \
 		display_zero.c \
 		len_nbr.c \
