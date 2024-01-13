@@ -5,8 +5,8 @@
 ** my put str
 */
 
-#include "my.h"
 #include <unistd.h>
+#include "my.h"
 
 static int put_n_str(char const *str, unsigned int max_len)
 {
