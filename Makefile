@@ -35,6 +35,9 @@ build_lib:
 clean_lib:
 	make fclean -C ${LIB_PATH}
 
+re_lib:
+	make re -C ${LIB_PATH}
+
 $(BINARY_NAME):	build_lib $(OBJ)
 	$(CC) -o $(BINARY_NAME) ${OBJ} ${LDFLAGS} ${LDLIBS}
 
@@ -59,4 +62,5 @@ gcovr:
 	gcovr --exclude tests/
 	gcovr --exclude tests/ --branches
 
-.PHONY:	all build_lib clean_lib clean fclean c_all re debug tests_run gcovr
+.PHONY:	all build_lib clean_lib re_lib clean fclean c_all re debug tests_run \
+	gcovr
