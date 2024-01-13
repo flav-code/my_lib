@@ -1,9 +1,9 @@
-name: my_radar
+name: a.out
 
 on: [push, pull_request]
 
 env:
-    EXECUTABLE: ./my_radar
+    EXECUTABLE: ./a.out
 
 jobs:
 
@@ -36,7 +36,7 @@ jobs:
 
     build_and_test:
         name: Build project
-        # needs: [check_coding_style]
+        needs: [check_coding_style]
         runs-on: ubuntu-latest
         container:
             image: epitechcontent/epitest-docker
