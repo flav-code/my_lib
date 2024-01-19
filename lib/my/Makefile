@@ -33,6 +33,7 @@ FOLDER_STRINGS	=	./strings/my_str_isalpha.c \
 					./strings/my_str_isprintable.c \
 					./strings/my_str_isupper.c \
 					./strings/my_str_to_word_array.c \
+					./strings/my_str_to_word_array2.c \
 					./strings/my_strcapitalize.c \
 					./strings/my_strcat.c	\
 					./strings/my_strcmp.c \
@@ -75,6 +76,8 @@ SRC	=	${FOLDER_MY_PRINTF} \
 		min.c \
 		utils.c
 
+CFLAGS	=	\
+
 OBJ	=	$(SRC:.c=.o)
 
 INCLUDE_PATH	=	../../include/
@@ -82,7 +85,7 @@ INCLUDE_PATH	=	../../include/
 all:	$(NAME)
 
 $(NAME):	$(OBJ)
-	@ar rc $(NAME) $(OBJ)
+	@ar rc $(NAME) $(OBJ) ${CFLAGS}
 	@cp $(NAME) ../
 	@mkdir -p ${INCLUDE_PATH}
 	@cp my.h ${INCLUDE_PATH}
@@ -96,4 +99,7 @@ fclean: clean
 
 re:	fclean all
 
-.PHONY: all clean fclean re
+debug:	CFLAGS += -g3
+debug:	re
+
+.PHONY: all clean fclean re debug

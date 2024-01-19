@@ -61,6 +61,7 @@ int my_show_word_array(char *const *tab);
 int is_alpha(char c);
 int is_numeric(char c);
 char **my_str_to_word_array(char const *str);
+char **my_str_to_word_array2(char *str, const char *delimiters);
 int is_an(char c);
 char *my_strdup(char const *src);
 int len_nbr(long long nb);

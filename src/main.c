@@ -10,13 +10,18 @@
 
 int main(void)
 {
-    char str[] = "...Hello! !world! I!'m flav''.";
-    const char separator[] = " .!'";
+    char str[] = " Hello   I'am   flav  ";
+    const char *separators = " '";
 
-    printf("------- START --------\n");
-    for (const char *token = my_strtok(str, separator); token != NULL;
-        token = my_strtok(NULL, separator))
-        printf("%s\n", token);
-    printf("-------- END ---------\n");
+    // my_putstr("------- START --------\n");
+    // for (const char *token = my_strtok(str, separators); token != NULL;
+    //     token = my_strtok(NULL, separators)) {
+    //     my_putstr(token);
+    //     my_putchar('\n');
+    // }
+    // my_putstr("-------- END ---------\n");
+
+    char **array = my_str_to_word_array2(str, separators);
+    my_show_word_array(array);
     return 0;
 }

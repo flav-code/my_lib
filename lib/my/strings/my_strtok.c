@@ -17,14 +17,14 @@ static int is_delimiter(char c, const char *delimiters)
     return 0;
 }
 
-static int next_l(char *buff, size_t i, const char *delimiters)
+static int next_l(char *buff, const char *delimiters)
 {
     int count = 0;
 
-    for (; buff[i] != '\0'; ++i)
-        if (is_delimiter(buff[i], delimiters)) {
+    for (int i = 0; buff[i] != '\0'; ++i)
+        if (is_delimiter(buff[i], delimiters))
             break;
-        } else
+        else
             (++count);
     return count;
 }
@@ -32,19 +32,21 @@ static int next_l(char *buff, size_t i, const char *delimiters)
 char *my_strtok(char *str, const char *delimiters)
 {
     static char *buff;
-    int save = 0;
+    char *token = NULL;
 
     if (str != NULL)
         buff = str;
     else
         str = buff;
-    for (size_t i = 0; buff[i] != '\0'; ++i) {
-        if (!is_delimiter(buff[i], delimiters)) {
-            save = next_l(buff, i, delimiters);
-            buff += i + save + 1;
-            buff[-1] = '\0';
-            return buff - 1 - save;
-        }
+    while (is_delimiter(buff[0], delimiters))
+        (++buff);
+    if (buff[0] == '\0')
+        return NULL;
+    token = buff;
+    buff += next_l(buff, delimiters);
+    if (buff[0] != '\0') {
+        buff[0] = '\0';
+        ++buff;
     }
-    return NULL;
+    return token;
 }
