@@ -9,7 +9,7 @@ BINARY_NAME	=	a.out
 
 NAME_TEST	=	unit_tests
 
-CFLAGS	=	-Wall -Wextra -Wno-unused-variable -I./include
+CFLAGS	=	-Wall -Wextra -I./include
 
 LDFLAGS	=	-L./lib
 
