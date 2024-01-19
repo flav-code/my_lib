@@ -5,34 +5,23 @@
 ** function de fou
 */
 
-int set_length(char const *to_find)
-{
-    int j = 0;
-
-    while (to_find[j] != '\0') {
-        ++j;
-    }
-    return j;
-}
+#include <stdio.h>
 
 char *my_strstr(char *str, char const *to_find)
 {
-    int i = 0;
-    int tf = -1;
-    int j = set_length(to_find);
+    int ti = 0;
+    int len = my_strlen(to_find);
     int final_index = -1;
 
-    if (j == 0)
+    if (len == 0)
         return str;
-    while (str[i] != '\0') {
-        if (str[i] != to_find[tf + 1])
-            tf = -1;
-        if (str[i] == to_find[tf + 1]) {
-            ++tf;
-        }
-        if (j - 1 == tf)
-            final_index = i - (j - 1);
-        ++i;
+    for (int i = 0; str[i] != '\0'; ++i) {
+        if (str[i] != to_find[ti])
+            ti = 0;
+        else
+            ++ti;
+        if (len == ti)
+            final_index = i - (len - 1);
     }
-    return (final_index == -1) ? (0) : &str[final_index];
+    return (final_index == -1) ? (NULL) : &str[final_index];
 }
