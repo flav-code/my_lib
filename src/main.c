@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2024
-** my_radar
+** my_lib
 ** File description:
-** my_radar project
+** my_lib project
 */
 
 #include <stdio.h>
