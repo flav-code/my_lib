@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2024
 ** my_lib
 ** File description:
-** my_lib project
+** my_lib proj
 */
 
 #include <stdio.h>
