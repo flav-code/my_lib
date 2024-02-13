@@ -5,6 +5,8 @@
 ** free the elements of an array
 */
 
+#include <stdlib.h>
+
 int free_array_elements(char **array)
 {
     for (int i = 0; array[i] != NULL; ++i)
