@@ -51,6 +51,7 @@ FOLDER_STRINGS	=	./strings/my_str_isalpha.c \
 
 SRC	=	${FOLDER_MY_PRINTF} \
 		${FOLDER_STRINGS} \
+		free_array_elements.c \
 		my_compute_power_rec.c \
 		my_compute_square_root.c \
 		my_find_prime_sup.c \

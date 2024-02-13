@@ -12,6 +12,7 @@
 
     #define MAX_INTSTR_LENGTH 12
 
+int free_array_elements(char **array);
 void my_putchar(char c);
 char *my_strstr(char *str, char const *to_find);
 int my_isneg(int nb);
