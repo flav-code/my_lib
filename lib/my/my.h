@@ -47,7 +47,7 @@ char *my_strcat(char *dest, char const *src);
 char *my_revstr(char *str);
 char *my_strncat(char *dest, char const *src, int nb);
 char *my_strconcat(char *str, char *str_bis);
-char *my_strconcat2(int count, va_list *, char *);
+char *my_strconcat2(int count, ...);
 
 char *my_nbrstr(int nbr);
 
