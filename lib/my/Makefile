@@ -38,6 +38,7 @@ FOLDER_STRINGS	=	./strings/my_str_isalpha.c \
 					./strings/my_strcat.c	\
 					./strings/my_strcmp.c \
 					./strings/my_strconcat.c \
+					./strings/my_strconcat2.c \
 					./strings/my_strcpy.c \
 					./strings/my_strdup.c \
 					./strings/my_strlen.c \
