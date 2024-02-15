@@ -27,7 +27,8 @@ FOLDER_MY_PRINTF	=	./my_printf/my_printf.c \
 						./my_printf/flags/e_cap.c \
 						./my_printf/flags/g_cap.c
 
-FOLDER_STRINGS	=	./strings/my_str_isalpha.c \
+FOLDER_STRINGS	=	./strings/my_char_isalpha.c \
+					./strings/my_str_isalpha.c \
 					./strings/my_str_islower.c \
 					./strings/my_str_isnum.c \
 					./strings/my_str_isprintable.c \
@@ -68,6 +69,7 @@ SRC	=	${FOLDER_MY_PRINTF} \
 		my_put_nbr.c \
 		my_get_nbr_length.c \
 		my_putstr.c \
+		my_realloc_strings.c \
 		my_revstr.c \
 		my_showmem.c \
 		my_showstr.c \

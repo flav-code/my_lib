@@ -12,6 +12,7 @@
 
     #define MAX_INTSTR_LENGTH 12
 
+int my_char_isalpha(char c);
 int free_array_elements(char **array);
 void my_putchar(char c);
 char *my_strstr(char *str, char const *to_find);
@@ -45,6 +46,7 @@ char *my_strcpy(char *dest, char const *src);
 int my_showmem(char const *str, int size);
 char *my_strncpy(char *dest, char const *src, int n);
 char *my_strcat(char *dest, char const *src);
+char **my_realloc_strings(char **array, int size);
 char *my_revstr(char *str);
 char *my_strncat(char *dest, char const *src, int nb);
 char *my_strconcat(char *str, char *str_bis);
