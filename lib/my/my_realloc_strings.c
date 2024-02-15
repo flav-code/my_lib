@@ -14,7 +14,7 @@ char **my_realloc_strings(char **array, int size)
     if (new_array == NULL)
         return NULL;
     for (int i = 0; i < size; ++i)
-        new_array[i] = array[i];
+        new_array[i] = array[i] != NULL ? array[i] : NULL;
     new_array[size] = NULL;
     free(array);
     return new_array;
