@@ -9,12 +9,14 @@
 
 char **my_realloc_strings(char **array, int size)
 {
-    char **new_array = malloc(sizeof(char *) * size + 1);
+    char **new_array = malloc(sizeof(char *) * (size + 1));
 
     if (new_array == NULL)
         return NULL;
     for (int i = 0; i < size; ++i)
-        new_array[i] = array[i] != NULL ? array[i] : NULL;
+        new_array[i] = NULL;
+    for (int i = 0; array[i] != NULL; ++i)
+        new_array[i] = array[i];
     new_array[size] = NULL;
     free(array);
     return new_array;
