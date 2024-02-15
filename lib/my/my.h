@@ -39,6 +39,7 @@ int my_str_isupper(char const *str);
 int my_is_prime(int nb);
 int my_str_isprintable(char const *str);
 int my_find_prime_sup(int nb);
+int my_get_array_len(char **array);
 int my_showstr(char const *str);
 char *my_strcpy(char *dest, char const *src);
 int my_showmem(char const *str, int size);

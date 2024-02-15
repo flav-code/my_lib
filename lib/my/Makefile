@@ -56,6 +56,7 @@ SRC	=	${FOLDER_MY_PRINTF} \
 		my_compute_power_rec.c \
 		my_compute_square_root.c \
 		my_find_prime_sup.c \
+		my_get_array_len.c \
 		my_getnbr.c \
 		my_isneg.c \
 		my_nbrstr.c \
