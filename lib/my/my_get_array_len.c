@@ -12,6 +12,6 @@ int my_get_array_len(char **array)
 {
     int i = 0;
 
-    for (; i < array[i] != '\0'; ++i);
+    for (; array[i] != NULL; ++i);
     return i;
 }
