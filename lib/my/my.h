@@ -12,6 +12,7 @@
 
     #define MAX_INTSTR_LENGTH 12
 
+void *my_memcpy(void *dest, const void *src, size_t size);
 int my_char_isalpha(char c);
 int free_array_elements(char **array);
 void my_putchar(char c);

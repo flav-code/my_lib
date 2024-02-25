@@ -61,6 +61,7 @@ SRC	=	${FOLDER_MY_PRINTF} \
 		my_getnbr.c \
 		my_isneg.c \
 		my_nbrstr.c \
+		my_memcpy.c \
 		my_is_prime.c \
 		my_print_alpha.c \
 		my_print_digits.c \
