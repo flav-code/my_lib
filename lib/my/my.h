@@ -10,6 +10,8 @@
 #ifndef MY_H_
     #define MY_H_
 
+    #include <stddef.h>
+
     #define MAX_INTSTR_LENGTH 12
 
 void *my_memcpy(void *dest, const void *src, size_t size);
